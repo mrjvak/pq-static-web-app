@@ -7,9 +7,8 @@
 
     var xhr = new XMLHttpRequest();
     //xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
-    xhr.open('GET', "https://pq-chat-app.azurewebsites.net/api/hello?prompt=ABBA", true);
+    xhr.open('GET', "https://pq-chat-app.azurewebsites.net/api/hello", true);
     
-
     xhr.setRequestHeader('x-functions-key', 's6PGFRAoU9JuyjjRIldEPYpZFwZ22WS772OWUZ_DCbecAzFulQz9iQ==');
     xhr.send();
     xhr.onreadystatechange = processRequest;
