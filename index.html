@@ -8,8 +8,8 @@
 <script>
     var xhr = new XMLHttpRequest();          
     document.getElementById("btn").addEventListener("click", function () {
-        var $pq-prompt = document.getElementById("pq-prompt").value;
-        xhr.open('GET', "https://pq-chat-app.azurewebsites.net/api/hello?prompt=" + $pq-prompt, true);
+        var $pqprompt = document.getElementById("pq-prompt").value;
+        xhr.open('GET', "https://pq-chat-app.azurewebsites.net/api/hello?prompt=" + $pqprompt, true);
         xhr.setRequestHeader('x-functions-key', 's6PGFRAoU9JuyjjRIldEPYpZFwZ22WS772OWUZ_DCbecAzFulQz9iQ==');
         xhr.send();
     
