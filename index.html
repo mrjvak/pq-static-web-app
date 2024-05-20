@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <body>
+  <iframe id="my_prompt" style="width: 400px; height: 200px;" src=''></iframe>
   <iframe id="chat" style="width: 400px; height: 400px;" src=''></iframe>
 </body>
 <script>
 
+    document.getElementById("btn").addEventListener("click", function () {
+        var $year = document.getElementById("year").value;
+        request = new XMLHttpRequest();
+        const reqUrl = "https://mudfoot.doc.stu.mmu.ac.uk/node/api/halloffame?year=" + $year
+        console.log("reqUrl: ", reqUrl);  
+        request.open("GET", reqUrl, true);
+        request.send(null);
+    })
+  
     var xhr = new XMLHttpRequest();
     //xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
     xhr.open('GET', "https://pq-chat-app.azurewebsites.net/api/hello?prompt=ABBA", true);
-    
     xhr.setRequestHeader('x-functions-key', 's6PGFRAoU9JuyjjRIldEPYpZFwZ22WS772OWUZ_DCbecAzFulQz9iQ==');
     xhr.send();
     xhr.onreadystatechange = processRequest;
